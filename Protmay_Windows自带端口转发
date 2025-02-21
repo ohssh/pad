@@ -1,0 +1,11 @@
+netsh interface portproxy add v4tov4  listenaddress=0.0.0.0 listenport=54321 connectaddress=192.168.1.101 connectport=54321
+
+
+netsh interface  portproxy delete v4tov4 listenaddress=172.16.0.4 listenport=8080
+
+netstat -ano | find listenport 查看是否启动成功
+netsh interface portproxy show all 显示系统中的转发规则列表
+netsh interface portproxy dump 查看portproxy设置
+netsh interface portproxy delete v4tov4 listenport=localport listenaddress=localaddress
+netsh interface portproxy reset 清除所有端口转发规则
+netsh interface  portproxy show  v4tov4 展示系统中的所有转发规则

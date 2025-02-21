@@ -1,0 +1,81 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens3:
+      addresses:
+              -  103.229.54.224/26
+              -  2407:cdc0:c004:0000:0000:0000:af9a:2176/64
+      gateway4: 103.229.54.254
+      gateway6: 2407:cdc0:c004::1
+      nameservers:
+          search: [ sudo ]
+          addresses:
+              - "208.67.222.222"
+              - "208.67.220.220"
+              - "2620:119:35::35"
+              - "2620:119:53::53"
+
+#=====================================================#
+
+vim /etc/sysctl.conf
+
+net.ipv6.conf.all.disable_ipv6 = 0
+net.ipv6.conf.default.disable_ipv6 = 0
+net.ipv6.conf.lo.disable_ipv6 = 0
+
+
+
+
+
+
+https://docs.digitalocean.com/products/networking/ipv6/how-to/enable/#on-existing-droplets
+
+/etc/netplan/
+
+检查
+cat /proc/sys/net/ipv6/conf/all/disable_ipv6
+0
+
+应用
+sudo netplan apply
+
+测试
+ip -6 addr show
+
+测试
+ping6 ipv6.google.com
+
+==========================================================================================
+network:
+    version: 2
+    ethernets:
+        eth0:
+            addresses:
+            - 103.142.131.241/24
+            match:
+                macaddress: ea:f2:54:dd:0a:36
+            nameservers:
+                addresses:
+                - 1.1.1.1
+                - 2606:4700:4700::1111
+                search: []
+            routes:
+            -   to: 0.0.0.0/0
+                via: 103.142.131.254
+            set-name: eth0
+        eth1:
+            addresses:
+            - 2407:cdc0:b027::10a7/48
+            match:
+                macaddress: 76:72:f1:02:f2:99
+            nameservers:
+                addresses:
+                - 1.1.1.1
+                - 2606:4700:4700::1111
+                search: []
+            routes:
+            -   to: ::/0
+                via: 2407:cdc0:b027::2
+            set-name: eth1
+==========================================================================================

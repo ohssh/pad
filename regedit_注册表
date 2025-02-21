@@ -1,0 +1,17 @@
+远程桌面
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server
+
+网络属性
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList
+
+自动更新
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings
+新建32位DWORD值，十进制，365，名称FlightSettingsMaxPauseDays
+
+自动登录
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
+新建字符串DefaultUserName，填入用户名，DefaultPassword，填入密码
+
+禁用防火墙
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\mpssvc
+start改为4

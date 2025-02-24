@@ -8,3 +8,8 @@ https://www.google.com/intl/zh-CN/chrome/?standalone=1
 
 隐私模式</br>
  --incognito about:blank
+
+Ubuntu修改东八时区并同步</br>
+tzselect一路选择</br>
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</br>
+查看date-R

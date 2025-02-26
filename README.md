@@ -13,3 +13,6 @@ Ubuntu修改东八时区并同步</br>
 tzselect一路选择</br>
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</br>
 查看date-R
+
+煎饼大神DD脚本</br>
+https://github.com/bin456789/reinstall

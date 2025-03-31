@@ -1,0 +1,33 @@
+查找PID，结束进程
+ps -aux|grep frp | grep -v grep
+kill -9 pid
+#=====================================================#
+screen -S ohssh
+cd /var/ohssh/
+./frps -c frps.toml
+#=====================================================#
+cd /etc/systemd/system/
+sudo vim frps.service
+
+[Unit]
+Description=frps
+After=network.target
+Wants=network.target
+ 
+[Service]
+Restart=on-failure
+RestartSec=5
+ExecStart=/home/frp/frps -c /home/frp/frps.toml
+ 
+[Install]
+WantedBy=multi-user.target
+#=====================================================#
+# 刷新服务列表
+systemctl daemon-reload
+# 设置开机自启
+systemctl enable frps.service
+# 启动服务
+systemctl start frps.service
+# 查看服务状态
+systemctl status frps.service
+#=====================================================#

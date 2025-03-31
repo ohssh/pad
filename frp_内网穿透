@@ -31,3 +31,48 @@ systemctl start frps.service
 # 查看服务状态
 systemctl status frps.service
 #=====================================================#
+origin.ohssh.com
+52228
+#================================================================#
+[frp相关]
+https://www.cnblogs.com/zhang1f/p/18347387
+https://gofrp.org/zh-cn/docs/features/common/authentication/
+https://github.com/fatedier/frp/releases/tag/v0.61.2
+#================================================================#
+服务器端配置 frps.toml
+
+bindPort = 52228
+quicBindPort = 52228
+auth.token = "这是密钥"
+transport.tcpMux = true
+transport.maxPoolCount = 20
+webServer.addr = "0.0.0.0"
+webServer.port = 52229
+webServer.user = "用户"
+webServer.password = "密码"
+allowPorts = [
+  { start = 60001, end = 60020 }
+]
+#================================================================#
+客户机端配置 frpc.toml
+
+serverAddr = "origin.ohssh.com"
+serverPort = 52228
+transport.protocol = "tcp"
+auth.token = "这是密钥"
+transport.poolCount = 1
+webServer.addr = "0.0.0.0"
+webServer.port = 52229
+webServer.user = "用户"
+webServer.password = "密码"
+transport.tcpMux = true
+
+[[proxies]]
+name = "应用内名称"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 内网端口
+remotePort = 外网端口
+transport.useEncryption = true
+transport.useCompression = true
+

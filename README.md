@@ -1,6 +1,9 @@
 # 一个中国开发者的懒人笔记
 </p>
 
+[浏览器指纹检测]</br>
+https://www.browserscan.net
+
 [谷歌翻译]</br>
 https://translate.google.com/?sl=en&tl=zh-CN
 
@@ -15,5 +18,19 @@ tzselect一路选择</br>
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</br>
 查看date-R
 
-煎饼大神DD脚本</br>
+[煎饼大神DD脚本]</br>
 https://github.com/bin456789/reinstall
+
+[秋水逸冰]</br>
+https://teddysun.com
+
+[IEPL中转]</br>
+https://nnr.moe
+
+[在线接码]</br>
+https://web.tqsms.xyz
+
+[TM收益查询]</br>
+https://app.traffmonetizer.com/dashboard
+
+

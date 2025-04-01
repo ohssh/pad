@@ -33,4 +33,12 @@ https://web.tqsms.xyz
 [TM收益查询]</br>
 https://app.traffmonetizer.com/dashboard
 
-
+[clash共享添加授权]</br>
+============================
+allow-lan: true
+authentication:
+- USER:PASSWORD
+skip-auth-prefixes:
+- 127.0.0.1/8
+- ::1/128
+============================

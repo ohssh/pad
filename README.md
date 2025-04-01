@@ -1,5 +1,12 @@
 # 一个中国开发者的懒人笔记
 </p>
+tm2025
+docker restart tm2025
+
+time2025
+
+reboot
+init 6
 
 [浏览器指纹检测]</br>
 https://www.browserscan.net

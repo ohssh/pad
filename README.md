@@ -15,6 +15,9 @@ https://haoxuebing.github.io/%E5%B7%A5%E5%85%B7/winsw.html
 [浏览器指纹检测]</br>
 https://www.browserscan.net
 
+[IP地址欺诈分检测]</br>
+https://scamalytics.com
+
 [谷歌翻译]</br>
 https://translate.google.com/?sl=en&tl=zh-CN
 

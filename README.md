@@ -41,8 +41,8 @@ https://teddysun.com
 [IEPL中转]</br>
 https://nnr.moe
 
-[在线接码]</br>
-https://web.tqsms.xyz
+[查询手机卡是否实卡]</br>
+https://freecarrierlookup.com
 
 [TM收益查询]</br>
 https://app.traffmonetizer.com/dashboard

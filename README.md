@@ -18,6 +18,12 @@ https://www.browserscan.net
 [IP地址欺诈分检测]</br>
 https://scamalytics.com
 
+[头像随机姓名]</br>
+https://www.fakepersongenerator.com
+
+[美国住宅精确地址]</br>
+https://www.zillow.com
+
 [谷歌翻译]</br>
 https://translate.google.com/?sl=en&tl=zh-CN
 

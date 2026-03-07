@@ -1,14 +1,15 @@
 Windows客户端
-https://data.traffmonetizer.com/downloads/Installer.exe
+https://data.traffmonetizer.com/downloads/Traffmonetizer.exe
 
 token
-zgslMyZVw77X6VuNbDFM0NfWdgWmstpID9ZIBtZ9WDY=
+zSSJFlThebOsKLu0VO1Km5BmxheVbbbU9GgB7c+XA5Q=
 
 Linux脚本
 ARM服务器
-docker pull traffmonetizer/cli_v2:arm64v8 && docker run -i --name tm2025 traffmonetizer/cli_v2:arm64v8 start accept --token zgslMyZVw77X6VuNbDFM0NfWdgWmstpID9ZIBtZ9WDY=
+docker pull traffmonetizer/cli_v2:arm64v8 && docker run -i --name tm2025 traffmonetizer/cli_v2:arm64v8 start accept --token zSSJFlThebOsKLu0VO1Km5BmxheVbbbU9GgB7c+XA5Q=
 docker update --restart=always tm2025
 
 x86 or x86_64
-docker pull traffmonetizer/cli_v2:latest && docker run -i --name tm2025 traffmonetizer/cli_v2 start accept --token zgslMyZVw77X6VuNbDFM0NfWdgWmstpID9ZIBtZ9WDY=
-docker update --restart=always tm2025
+docker pull traffmonetizer/cli_v2:latest && docker run -i --name tm2025 traffmonetizer/cli_v2 start accept --token zSSJFlThebOsKLu0VO1Km5BmxheVbbbU9GgB7c+XA5Q=
+
+docker update --restart=always tm2025 && docker start tm2025
